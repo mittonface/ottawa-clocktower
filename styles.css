@@ -50,6 +50,8 @@ body::after {
   position: relative;
   width: 100%;
   overflow: hidden;
+  isolation: isolate;
+  background: var(--band-dark);
 }
 
 /* Banner image container */
