@@ -76,6 +76,7 @@ body::after {
   pointer-events: none;
   background:
     linear-gradient(to bottom, var(--shadow) 0%, transparent 8%),
+    linear-gradient(to top, var(--band-dark) 0%, transparent 12%),
     linear-gradient(to right, var(--shadow) 0%, transparent 12%),
     linear-gradient(to left, var(--shadow) 0%, transparent 12%);
   z-index: 1;
