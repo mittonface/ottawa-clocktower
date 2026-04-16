@@ -49,7 +49,7 @@ body::after {
 .hero {
   position: relative;
   width: 100%;
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* Banner image container */
@@ -83,23 +83,33 @@ body::after {
 
 /* ── SOCIAL BAR (below hero) ── */
 .social-bar {
-  position: relative;
-  z-index: 5;
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1.2rem 2rem 0;
-  margin-top: -2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 3.5rem 2rem 0;
   background: transparent;
+}
+.social-bar-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
+}
+.social-bar-links {
+  display: flex;
+  gap: 1rem;
 }
 .social-bar a {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1.2rem;
+  gap: 0.6rem;
+  padding: 0.75rem 2rem;
   text-decoration: none;
   font-family: 'Cinzel', serif;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 600;
@@ -107,8 +117,8 @@ body::after {
   transition: all 0.3s ease;
 }
 .social-bar a svg {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   fill: currentColor;
   flex-shrink: 0;
 }
@@ -135,7 +145,7 @@ body::after {
 /* ── TORN PARCHMENT EDGE ── */
 .hero-tear {
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: 2;
@@ -150,16 +160,18 @@ body::after {
 
 /* ── BLOOD DRIPS ── */
 .hero-drips {
-  position: absolute;
-  bottom: -50px;
+  position: relative;
+  z-index: 5;
   left: 0;
   right: 0;
-  z-index: 3;
+  width: 100%;
   pointer-events: none;
-  height: 60px;
+  height: 0;
+  margin-top: -50px;
 }
 .drip {
   position: absolute;
+  top: 0;
   color: #3a0a0a;
   opacity: 0;
   animation: dripFall 1.8s ease-in forwards;
@@ -287,7 +299,7 @@ body::after {
   gap: 4rem;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 5rem 4rem;
+  padding: 4rem 4rem 5rem;
   align-items: start;
 }
 .band-wide--reverse {
@@ -428,29 +440,30 @@ body::after {
   display: block;
 }
 
-/* Arches divider — about (dark) hangs over how-we-play (mid) */
+/* Terrain divider — about (dark) hangs over how-we-play (mid) */
 .gothic-divider--arches {
   color: var(--band-dark);
 }
 .gothic-divider--arches svg {
-  height: 70px;
+  height: 100px;
 }
 
-/* Fence divider — how-we-play (mid) hangs over learn (deep) */
+/* Terrain divider — how-we-play (mid) hangs over learn (deep) */
 .gothic-divider--fence {
   color: var(--band-mid);
 }
 .gothic-divider--fence svg {
-  height: 70px;
+  height: 95px;
 }
 
-/* Battlement divider — learn (deep) hangs over join-us (dark) */
+/* Terrain divider — learn (deep) hangs over join-us (dark) */
 .gothic-divider--battlement {
   color: var(--band-deep);
 }
 .gothic-divider--battlement svg {
-  height: 65px;
+  height: 90px;
 }
+
 
 /* ── SECTION HEADINGS ── */
 .section-label {
@@ -820,27 +833,59 @@ footer .footer-legal a:hover {
   to { opacity: 1; }
 }
 .hero-img { animation: fadeIn 1s ease 0.2s both; }
-.social-bar { animation: fadeIn 1s ease 0.6s both; }
 
-/* ── SCROLL REVEAL ── */
+/* ── HERO PARALLAX ── */
+.hero-img-wrap {
+  position: relative;
+  z-index: 0;
+  will-change: transform;
+}
+
+/* ── SCROLL-DRIVEN REVEALS ── */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(40px);
+  will-change: opacity, transform;
+  transition: none; /* JS drives these directly */
 }
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* Stagger the aside column slightly */
+
+/* Stagger children within revealed sections */
 .reveal .band-aside {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s;
+  transform: translateY(30px);
+  will-change: opacity, transform;
 }
-.reveal.is-visible .band-aside {
-  opacity: 1;
-  transform: translateY(0);
+.reveal .section-label {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+}
+.reveal .about,
+.reveal .play-modes,
+.reveal .learn-videos,
+.reveal .learn-links,
+.reveal .community-links {
+  opacity: 0;
+  transform: translateY(25px);
+  will-change: opacity, transform;
+}
+.reveal .pull-quote,
+.reveal .at-a-glance,
+.reveal .first-game {
+  opacity: 0;
+  transform: translateY(20px) scale(0.97);
+  will-change: opacity, transform;
+}
+.reveal .play-cta,
+.reveal .community-note {
+  opacity: 0;
+  transform: translateY(15px);
+  will-change: opacity, transform;
+}
+
+/* Gothic divider parallax depth */
+.gothic-divider {
+  will-change: transform;
 }
 
 /* ── RESPONSIVE ── */
@@ -856,7 +901,7 @@ footer .footer-legal a:hover {
   }
   .band-wide {
     grid-template-columns: 1fr;
-    padding: 4rem 2rem;
+    padding: 3.5rem 2rem 4rem;
     gap: 2.5rem;
   }
   .band-wide--reverse {
@@ -871,7 +916,7 @@ footer .footer-legal a:hover {
 }
 
 @media (max-width: 700px) {
-  .social-bar a { font-size: 0.5rem; padding: 0.4rem 0.8rem; }
+  .social-bar a { font-size: 0.65rem; padding: 0.6rem 1.2rem; }
   .hero-tear svg { height: 50px; }
   .hero-drips { bottom: -50px; height: 50px; }
   .drip--1 { height: 30px; }
@@ -887,7 +932,7 @@ footer .footer-legal a:hover {
     margin-right: 1rem;
   }
   .band-wide {
-    padding: 3rem 1.25rem;
+    padding: 3rem 1.25rem 3rem;
     gap: 2rem;
   }
   .play-modes { grid-template-columns: 1fr; }
@@ -902,9 +947,9 @@ footer .footer-legal a:hover {
   .community-links { flex-direction: column; gap: 1.2rem; }
   .learn-videos { grid-template-columns: 1fr; }
 
-  .gothic-divider--arches svg { height: 40px; }
-  .gothic-divider--fence svg { height: 40px; }
-  .gothic-divider--battlement svg { height: 35px; }
+  .gothic-divider--arches svg { height: 60px; }
+  .gothic-divider--fence svg { height: 55px; }
+  .gothic-divider--battlement svg { height: 50px; }
 
   .play-cta,
   .community-note {
