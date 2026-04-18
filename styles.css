@@ -489,6 +489,20 @@ body::after {
   color: var(--bone);
   font-weight: 600;
 }
+.learn-video-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--purple-glow);
+  text-decoration: none;
+  padding: 0.55rem 0;
+  border-bottom: none;
+  transition: all 0.3s ease;
+}
 .about-cta {
   display: inline-block;
   margin-top: 1.2rem;
