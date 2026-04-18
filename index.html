@@ -1,394 +1,516 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ottawa Plays Blood on the Clocktower</title>
-  <meta name="description" content="Play Blood on the Clocktower in Ottawa, Ontario. Join Ottawa's BOTC community for in-person and online games. All skill levels welcome — beginners and veterans alike.">
-  <meta name="keywords" content="Blood on the Clocktower, Ottawa, BOTC Ottawa, Ottawa Clocktower, social deduction game Ottawa, board games Ottawa, Clocktower Ottawa, Blood on the Clocktower Canada, Ottawa board game group, Ottawa gaming community, Kanata board games, BOTC Ontario">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="canonical" href="https://ottawaplaysbotc.com/">
-  <meta property="og:title" content="Ottawa Plays Blood on the Clocktower">
-  <meta property="og:description" content="Play Blood on the Clocktower in Ottawa, Ontario. Join our community for in-person and online games. All skill levels welcome.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ottawaplaysbotc.com/">
-  <meta property="og:locale" content="en_CA">
-  <meta property="og:site_name" content="Ottawa Plays Blood on the Clocktower">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ottawa Plays Blood on the Clocktower">
-  <meta name="twitter:description" content="Play Blood on the Clocktower in Ottawa, Ontario. Join our community for in-person and online games.">
-  <meta name="geo.region" content="CA-ON">
-  <meta name="geo.placename" content="Ottawa">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Ottawa Clocktower",
-    "description": "Ottawa's Blood on the Clocktower community — in-person and online games in Canada's Capital region.",
-    "url": "https://ottawaplaysbotc.com",
-    "areaServed": {
-      "@type": "City",
-      "name": "Ottawa",
-      "containedInPlace": {
-        "@type": "AdministrativeArea",
-        "name": "Ontario, Canada"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ottawa Plays Blood on the Clocktower</title>
+    <meta
+      name="description"
+      content="Play Blood on the Clocktower in Ottawa, Ontario. Join Ottawa's BOTC community for in-person and online games. All skill levels welcome — beginners and veterans alike."
+    />
+    <meta
+      name="keywords"
+      content="Blood on the Clocktower, Ottawa, BOTC Ottawa, Ottawa Clocktower, social deduction game Ottawa, board games Ottawa, Clocktower Ottawa, Blood on the Clocktower Canada, Ottawa board game group, Ottawa gaming community, Kanata board games, BOTC Ontario"
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="canonical" href="https://ottawaplaysbotc.com/" />
+    <meta property="og:title" content="Ottawa Plays Blood on the Clocktower" />
+    <meta
+      property="og:description"
+      content="Play Blood on the Clocktower in Ottawa, Ontario. Join our community for in-person and online games. All skill levels welcome."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ottawaplaysbotc.com/" />
+    <meta property="og:locale" content="en_CA" />
+    <meta
+      property="og:site_name"
+      content="Ottawa Plays Blood on the Clocktower"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Ottawa Plays Blood on the Clocktower" />
+    <meta
+      name="twitter:description"
+      content="Play Blood on the Clocktower in Ottawa, Ontario. Join our community for in-person and online games."
+    />
+    <meta name="geo.region" content="CA-ON" />
+    <meta name="geo.placename" content="Ottawa" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ottawa Clocktower",
+        "description": "Ottawa's Blood on the Clocktower community — in-person and online games in Canada's Capital region.",
+        "url": "https://ottawaplaysbotc.com",
+        "areaServed": {
+          "@type": "City",
+          "name": "Ottawa",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Ontario, Canada"
+          }
+        },
+        "sameAs": ["https://www.facebook.com/groups/700379819064332"]
       }
-    },
-    "sameAs": [
-      "https://www.facebook.com/groups/700379819064332"
-    ]
-  }
-  </script>
+    </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-  <!-- ═══ HERO BANNER ═══ -->
-  <section class="hero">
-    <div class="hero-img-wrap">
-      <img src="parliament.png" alt="" class="hero-img">
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-tagline">Ottawa Plays</p>
-      <img src="BotC-Wordmark-White.png" alt="Blood on the Clocktower" class="hero-wordmark">
-    </div>
-    <!-- Organic terrain edge — wide central valley -->
-    <div class="hero-tear">
-      <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
-        <path d="M0,80 C120,125 220,100 350,148 C450,168 520,174 620,176 C740,173 840,162 960,138 C1060,115 1140,135 1200,115 L1200,220 L0,220 Z" fill="currentColor"/>
-        <path d="M0,95 C110,132 230,108 360,152 C460,170 530,175 630,176 C750,173 850,164 970,142 C1070,120 1145,138 1200,128 L1200,220 L0,220 Z" fill="currentColor" opacity="0.5"/>
-        <path d="M0,112 C115,140 235,118 370,156 C465,171 535,175 635,176 C755,173 855,165 975,146 C1075,126 1148,142 1200,134 L1200,220 L0,220 Z" fill="currentColor" opacity="0.25"/>
-      </svg>
-    </div>
-  </section>
-
-
-  <!-- ═══ ABOUT ═══ -->
-  <section class="band band--dark reveal">
-    <div class="social-bar">
-      <p class="social-bar-label">Live in the Ottawa area? Join us!</p>
-      <div class="social-bar-links">
-        <a href="https://discord.gg/9R8uhX4Mtf" class="social-dc" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
-          Discord
-        </a>
-        <a href="https://www.facebook.com/groups/700379819064332" class="social-fb" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          Facebook
-        </a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ═══ HERO BANNER ═══ -->
+    <section class="hero">
+      <div class="hero-img-wrap">
+        <img src="parliament.jpg" alt="" class="hero-img" />
       </div>
-    </div>
-    <div class="band-wide">
-      <div class="band-col">
-        <div class="section-label">What is Blood on the Clocktower?</div>
-        <div class="about">
-          <p>
-            <strong>Blood on the Clocktower</strong> is the world's greatest social deduction game — think Werewolf or Mafia — where every player gets a unique and powerful role and death isn't the end.
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-tagline">Ottawa Plays</p>
+        <img
+          src="BotC-Wordmark-White.png"
+          alt="Blood on the Clocktower"
+          class="hero-wordmark"
+        />
+      </div>
+      <!-- Organic terrain edge — wide central valley -->
+      <div class="hero-tear">
+        <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
+          <path
+            d="M0,80 C120,125 220,100 350,148 C450,168 520,174 620,176 C740,173 840,162 960,138 C1060,115 1140,135 1200,115 L1200,220 L0,220 Z"
+            fill="currentColor"
+          />
+          <path
+            d="M0,95 C110,132 230,108 360,152 C460,170 530,175 630,176 C750,173 850,164 970,142 C1070,120 1145,138 1200,128 L1200,220 L0,220 Z"
+            fill="currentColor"
+            opacity="0.5"
+          />
+          <path
+            d="M0,112 C115,140 235,118 370,156 C465,171 535,175 635,176 C755,173 855,165 975,146 C1075,126 1148,142 1200,134 L1200,220 L0,220 Z"
+            fill="currentColor"
+            opacity="0.25"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section class="band band--dark reveal">
+      <div class="social-bar">
+        <p class="social-bar-label">Live in the Ottawa area? Join us!</p>
+        <div class="social-bar-links">
+          <a
+            href="https://discord.gg/9R8uhX4Mtf"
+            class="social-dc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"
+              />
+            </svg>
+            Discord
+          </a>
+          <a
+            href="https://www.facebook.com/groups/700379819064332"
+            class="social-fb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
+            </svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+      <div class="band-wide">
+        <div class="band-col">
+          <div class="section-label">What is Blood on the Clocktower?</div>
+          <div class="about">
+            <p>
+              <strong>Blood on the Clocktower</strong> is the world's greatest
+              social deduction game — think Werewolf or Mafia — where every
+              player gets a unique and powerful role and death isn't the end.
+            </p>
+            <p>Learn more at The Pandemonium Institute's official website.</p>
+            <a
+              href="https://bloodontheclocktower.com/"
+              class="about-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Visit the official website &rarr;</a
+            >
+          </div>
+        </div>
+        <aside class="band-col band-aside">
+          <div class="at-a-glance">
+            <div class="glance-title">At a Glance</div>
+            <div class="glance-grid">
+              <div class="glance-item">
+                <span class="glance-value">5–20</span>
+                <span class="glance-label">Players</span>
+              </div>
+              <div class="glance-item">
+                <span class="glance-value">1–2</span>
+                <span class="glance-label">Hours</span>
+              </div>
+              <div class="glance-item">
+                <span class="glance-value">1</span>
+                <span class="glance-label">Storyteller</span>
+              </div>
+              <div class="glance-item">
+                <span class="glance-value">&infin;</span>
+                <span class="glance-label">Replayability</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <!-- Organic terrain divider — ascending left to right -->
+      <div class="gothic-divider gothic-divider--arches">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M0,0 L0,15 C80,20 135,38 215,45 C300,53 338,40 418,56 C498,68 535,54 615,70 C688,82 725,70 805,85 C888,96 924,80 1004,93 C1080,104 1118,100 1200,108 L1200,0 Z"
+            fill="currentColor"
+          />
+          <path
+            d="M0,0 L0,10 C90,14 145,32 225,39 C312,47 350,35 430,50 C510,62 548,49 628,65 C702,77 740,66 820,80 C902,91 938,76 1018,89 C1092,100 1130,96 1200,103 L1200,0 Z"
+            fill="currentColor"
+            opacity="0.4"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══ HOW WE PLAY ═══ -->
+    <section class="band band--mid reveal">
+      <div class="band-wide band-wide--reverse">
+        <aside class="band-col band-aside">
+          <div class="pull-quote">
+            <p>An instant community in a box.</p>
+            <cite>— The Pandemonium Institute</cite>
+          </div>
+        </aside>
+        <div class="band-col">
+          <div class="section-label">How We Play</div>
+          <div class="play-modes">
+            <div class="play-mode">
+              <span class="play-mode-icon" aria-hidden="true">&#129309;</span>
+              <h3>In-Person Games</h3>
+              <p>
+                Currently we're meeting up once per month in Kanata to play
+                Clocktower how it was intended to be played — around a circle
+                with a group of friends. We're a friendly and inclusive group,
+                and we usually run a beginner-friendly game alongside one for
+                more experienced players.
+              </p>
+              <span class="play-freq">Monthly</span>
+            </div>
+            <div class="play-mode">
+              <span class="play-mode-icon" aria-hidden="true">&#128187;</span>
+              <h3>Online Games</h3>
+              <p>
+                Between our in-person games we run more frequent online games
+                using the
+                <a
+                  href="https://botc.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >official app</a
+                >. This lets us try new scripts, practice lying, or just get
+                your fix when you can't wait for the next in-person session.
+              </p>
+              <a
+                href="https://www.youtube.com/watch?v=l8vbPIf4VJY"
+                class="learn-video-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >How to use the official app &rarr;</a
+              >
+              <span class="play-freq">Multiple times per month</span>
+            </div>
+          </div>
+          <p class="play-cta">
+            Join our
+            <a
+              href="https://discord.gg/9R8uhX4Mtf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Discord</a
+            >
+            or
+            <a
+              href="https://www.facebook.com/groups/700379819064332"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook group</a
+            >
+            to find out how to get in on the fun.
           </p>
-          <p>Learn more at The Pandemonium Institute's official website.</p>
-          <a href="https://bloodontheclocktower.com/" class="about-cta" target="_blank" rel="noopener noreferrer">Visit the official website &rarr;</a>
         </div>
       </div>
-      <aside class="band-col band-aside">
-        <div class="at-a-glance">
-          <div class="glance-title">At a Glance</div>
-          <div class="glance-grid">
-            <div class="glance-item">
-              <span class="glance-value">5–20</span>
-              <span class="glance-label">Players</span>
-            </div>
-            <div class="glance-item">
-              <span class="glance-value">1–2</span>
-              <span class="glance-label">Hours</span>
-            </div>
-            <div class="glance-item">
-              <span class="glance-value">1</span>
-              <span class="glance-label">Storyteller</span>
-            </div>
-            <div class="glance-item">
-              <span class="glance-value">&infin;</span>
-              <span class="glance-label">Replayability</span>
-            </div>
+      <!-- Organic terrain divider — central hill peak -->
+      <div class="gothic-divider gothic-divider--fence">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M0,0 L0,22 C100,30 210,52 340,75 C475,100 560,108 650,105 C750,100 870,72 990,45 C1070,28 1130,18 1200,15 L1200,0 Z"
+            fill="currentColor"
+          />
+          <path
+            d="M0,0 L0,16 C108,24 218,46 348,70 C482,94 568,103 658,100 C758,97 878,70 998,42 C1076,26 1135,14 1200,10 L1200,0 Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══ LEARN TO PLAY ═══ -->
+    <section class="band band--deep reveal">
+      <div class="band-wide">
+        <div class="band-col">
+          <div class="section-label">Learn to Play</div>
+          <div class="learn-videos">
+            <a
+              href="https://www.youtube.com/watch?v=M-aZP47Nm9g"
+              class="learn-video"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="learn-video-thumb">
+                <img
+                  src="https://img.youtube.com/vi/M-aZP47Nm9g/maxresdefault.jpg"
+                  alt="How to Play Blood on the Clocktower"
+                  loading="lazy"
+                />
+                <div class="learn-video-play"></div>
+              </div>
+              <div class="learn-video-label">How to Play</div>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=m14N28Lq-jM"
+              class="learn-video"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="learn-video-thumb">
+                <img
+                  src="https://img.youtube.com/vi/m14N28Lq-jM/maxresdefault.jpg"
+                  alt="Sample Game of Blood on the Clocktower"
+                  loading="lazy"
+                />
+                <div class="learn-video-play"></div>
+              </div>
+              <div class="learn-video-label">Watch a Sample Game</div>
+            </a>
+          </div>
+          <div class="learn-links">
+            <a
+              href="https://wiki.bloodontheclocktower.com/Main_Page"
+              class="learn-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="learn-link-icon" aria-hidden="true">&#128214;</span>
+              <div>
+                <div class="learn-link-title">Learn More on the Wiki</div>
+                <div class="learn-link-desc">
+                  Dive deeper into characters, scripts, and strategies.
+                </div>
+              </div>
+            </a>
           </div>
         </div>
-      </aside>
-    </div>
-    <!-- Organic terrain divider — ascending left to right -->
-    <div class="gothic-divider gothic-divider--arches">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0 L0,15 C80,20 135,38 215,45 C300,53 338,40 418,56 C498,68 535,54 615,70 C688,82 725,70 805,85 C888,96 924,80 1004,93 C1080,104 1118,100 1200,108 L1200,0 Z" fill="currentColor"/>
-        <path d="M0,0 L0,10 C90,14 145,32 225,39 C312,47 350,35 430,50 C510,62 548,49 628,65 C702,77 740,66 820,80 C902,91 938,76 1018,89 C1092,100 1130,96 1200,103 L1200,0 Z" fill="currentColor" opacity="0.4"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ═══ HOW WE PLAY ═══ -->
-  <section class="band band--mid reveal">
-    <div class="band-wide band-wide--reverse">
-      <aside class="band-col band-aside">
-        <div class="pull-quote">
-          <p>An instant community in a box.</p>
-          <cite>— The Pandemonium Institute</cite>
-        </div>
-      </aside>
-      <div class="band-col">
-        <div class="section-label">How We Play</div>
-        <div class="play-modes">
-          <div class="play-mode">
-            <span class="play-mode-icon" aria-hidden="true">&#129309;</span>
-            <h3>In-Person Games</h3>
-            <p>Currently we're meeting up once per month in Kanata to play Clocktower how it was intended to be played — around a circle with a group of friends. We're a friendly and inclusive group, and we usually run a beginner-friendly game alongside one for more experienced players.</p>
-            <span class="play-freq">Monthly</span>
+        <aside class="band-col band-aside">
+          <div class="first-game">
+            <div class="first-game-title">Your First Game</div>
+            <ul class="first-game-list">
+              <li>No experience needed — we'll teach you everything</li>
+              <li>Beginners play in a friendly separate group</li>
+              <li>Games run 1–2 hours each</li>
+              <li>
+                It's not about winning — it's about having fun lying to your
+                friends
+              </li>
+            </ul>
           </div>
-          <div class="play-mode">
-            <span class="play-mode-icon" aria-hidden="true">&#128187;</span>
-            <h3>Online Games</h3>
-            <p>Between our in-person games we run more frequent online games using the <a href="https://botc.app" target="_blank" rel="noopener noreferrer">official app</a>. This lets us try new scripts, practice lying, or just get your fix when you can't wait for the next in-person session.</p>
-            <a href="https://www.youtube.com/watch?v=l8vbPIf4VJY" class="learn-video-link" target="_blank" rel="noopener noreferrer">How to use the official app &rarr;</a>
-            <span class="play-freq">Multiple times per month</span>
+        </aside>
+      </div>
+      <!-- Organic terrain divider — undulating multiple humps -->
+      <div class="gothic-divider gothic-divider--battlement">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M0,0 L0,62 C120,52 175,32 275,40 C375,48 415,68 518,60 C618,52 658,32 760,25 C862,18 900,44 1000,50 C1080,55 1132,38 1200,32 L1200,0 Z"
+            fill="currentColor"
+          />
+          <path
+            d="M0,0 L0,55 C128,46 182,26 282,34 C382,42 422,62 524,54 C624,46 664,27 768,20 C870,13 908,40 1008,46 C1088,51 1138,34 1200,28 L1200,0 Z"
+            fill="currentColor"
+            opacity="0.4"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══ JOIN US ═══ -->
+    <section class="band band--dark band--last reveal">
+      <div class="band-wide band-wide--reverse">
+        <aside class="band-col band-aside">
+          <blockquote class="pull-quote pull-quote--small">
+            <p>
+              Step 1: Be cute.<br />Step 2: World domination.<br />Step 3:
+              Bweakfast.
+            </p>
+            <cite>— Lil' Monsta</cite>
+          </blockquote>
+        </aside>
+        <div class="band-col">
+          <div class="section-label">Join Us</div>
+          <div class="community-links">
+            <a
+              href="https://discord.gg/9R8uhX4Mtf"
+              class="community-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="community-link-icon community-link-icon--dc">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"
+                  />
+                </svg>
+              </div>
+              <div class="community-link-body">
+                <div class="community-link-title">Discord Server</div>
+                <div class="community-link-desc">
+                  Chat, find games & coordinate
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://www.facebook.com/groups/700379819064332"
+              class="community-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="community-link-icon community-link-icon--fb">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </div>
+              <div class="community-link-body">
+                <div class="community-link-title">Facebook Group</div>
+                <div class="community-link-desc">Events & announcements</div>
+              </div>
+            </a>
           </div>
-        </div>
-        <p class="play-cta">Join our <a href="https://discord.gg/9R8uhX4Mtf" target="_blank" rel="noopener noreferrer">Discord</a> or <a href="https://www.facebook.com/groups/700379819064332" target="_blank" rel="noopener noreferrer">Facebook group</a> to find out how to get in on the fun.</p>
-      </div>
-    </div>
-    <!-- Organic terrain divider — central hill peak -->
-    <div class="gothic-divider gothic-divider--fence">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0 L0,22 C100,30 210,52 340,75 C475,100 560,108 650,105 C750,100 870,72 990,45 C1070,28 1130,18 1200,15 L1200,0 Z" fill="currentColor"/>
-        <path d="M0,0 L0,16 C108,24 218,46 348,70 C482,94 568,103 658,100 C758,97 878,70 998,42 C1076,26 1135,14 1200,10 L1200,0 Z" fill="currentColor" opacity="0.4"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ═══ LEARN TO PLAY ═══ -->
-  <section class="band band--deep reveal">
-    <div class="band-wide">
-      <div class="band-col">
-        <div class="section-label">Learn to Play</div>
-        <div class="learn-videos">
-          <a href="https://www.youtube.com/watch?v=M-aZP47Nm9g" class="learn-video" target="_blank" rel="noopener noreferrer">
-            <div class="learn-video-thumb">
-              <img src="https://img.youtube.com/vi/M-aZP47Nm9g/maxresdefault.jpg" alt="How to Play Blood on the Clocktower" loading="lazy">
-              <div class="learn-video-play"></div>
-            </div>
-            <div class="learn-video-label">How to Play</div>
-          </a>
-          <a href="https://www.youtube.com/watch?v=m14N28Lq-jM" class="learn-video" target="_blank" rel="noopener noreferrer">
-            <div class="learn-video-thumb">
-              <img src="https://img.youtube.com/vi/m14N28Lq-jM/maxresdefault.jpg" alt="Sample Game of Blood on the Clocktower" loading="lazy">
-              <div class="learn-video-play"></div>
-            </div>
-            <div class="learn-video-label">Watch a Sample Game</div>
-          </a>
-        </div>
-        <div class="learn-links">
-          <a href="https://wiki.bloodontheclocktower.com/Main_Page" class="learn-link" target="_blank" rel="noopener noreferrer">
-            <span class="learn-link-icon" aria-hidden="true">&#128214;</span>
-            <div>
-              <div class="learn-link-title">Learn More on the Wiki</div>
-              <div class="learn-link-desc">Dive deeper into characters, scripts, and strategies.</div>
-            </div>
-          </a>
+          <p class="community-note">
+            Join our Discord or Facebook group for game schedules and event
+            details.
+          </p>
         </div>
       </div>
-      <aside class="band-col band-aside">
-        <div class="first-game">
-          <div class="first-game-title">Your First Game</div>
-          <ul class="first-game-list">
-            <li>No experience needed — we'll teach you everything</li>
-            <li>Beginners play in a friendly separate group</li>
-            <li>Games run 1–2 hours each</li>
-            <li>It's not about winning — it's about having fun lying to your friends</li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-    <!-- Organic terrain divider — undulating multiple humps -->
-    <div class="gothic-divider gothic-divider--battlement">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0 L0,62 C120,52 175,32 275,40 C375,48 415,68 518,60 C618,52 658,32 760,25 C862,18 900,44 1000,50 C1080,55 1132,38 1200,32 L1200,0 Z" fill="currentColor"/>
-        <path d="M0,0 L0,55 C128,46 182,26 282,34 C382,42 422,62 524,54 C624,46 664,27 768,20 C870,13 908,40 1008,46 C1088,51 1138,34 1200,28 L1200,0 Z" fill="currentColor" opacity="0.4"/>
-      </svg>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ JOIN US ═══ -->
-  <section class="band band--dark band--last reveal">
-    <div class="band-wide band-wide--reverse">
-      <aside class="band-col band-aside">
-        <blockquote class="pull-quote pull-quote--small">
-          <p>Step 1: Be cute.<br>Step 2: World domination.<br>Step 3: Bweakfast.</p>
-          <cite>— Lil' Monsta</cite>
-        </blockquote>
-      </aside>
-      <div class="band-col">
-        <div class="section-label">Join Us</div>
-        <div class="community-links">
-          <a href="https://discord.gg/9R8uhX4Mtf" class="community-link" target="_blank" rel="noopener noreferrer">
-            <div class="community-link-icon community-link-icon--dc">
-              <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
-            </div>
-            <div class="community-link-body">
-              <div class="community-link-title">Discord Server</div>
-              <div class="community-link-desc">Chat, find games & coordinate</div>
-            </div>
-          </a>
-          <a href="https://www.facebook.com/groups/700379819064332" class="community-link" target="_blank" rel="noopener noreferrer">
-            <div class="community-link-icon community-link-icon--fb">
-              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </div>
-            <div class="community-link-body">
-              <div class="community-link-title">Facebook Group</div>
-              <div class="community-link-desc">Events & announcements</div>
-            </div>
-          </a>
-        </div>
-        <p class="community-note">Join our Discord or Facebook group for game schedules and event details.</p>
-      </div>
-    </div>
-  </section>
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+      <p>Good night, Ravenswood Bluff.</p>
+      <p class="footer-legal">
+        <a
+          href="https://bloodontheclocktower.com/"
+          target="_blank"
+          rel="noopener"
+          >Blood on the Clocktower</a
+        >
+        is a trademark of
+        <a
+          href="https://www.thepandemoniuminstitute.com/"
+          target="_blank"
+          rel="noopener"
+          >The Pandemonium Institute</a
+        >. Door knocker logo &amp; wordmark used under their
+        <a
+          href="https://bloodontheclocktower.com/pages/community-created-content-policy"
+          target="_blank"
+          rel="noopener"
+          >community content policy</a
+        >. This is an unofficial fan page.
+      </p>
+    </footer>
 
-  <!-- ═══ FOOTER ═══ -->
-  <footer>
-    <p>Good night, Ravenswood Bluff.</p>
-    <p class="footer-legal"><a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener">Blood on the Clocktower</a> is a trademark of <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener">The Pandemonium Institute</a>. Door knocker logo &amp; wordmark used under their <a href="https://bloodontheclocktower.com/pages/community-created-content-policy" target="_blank" rel="noopener">community content policy</a>. This is an unofficial fan page.</p>
-  </footer>
+    <script>
+      // ── Utility: clamp ──
+      function clamp(v, min, max) {
+        return Math.min(Math.max(v, min), max);
+      }
 
-  <script>
-    // ── Utility: clamp and ease ──
-    function clamp(v, min, max) { return Math.min(Math.max(v, min), max); }
-    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
-    function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+      // ── Hero parallax ──
+      const heroWrap = document.querySelector(".hero-img-wrap");
+      const heroSection = document.querySelector(".hero");
 
-    // ── Hero parallax ──
-    const heroWrap = document.querySelector('.hero-img-wrap');
-    const heroSection = document.querySelector('.hero');
+      // ── Gothic divider parallax ──
+      const dividers = document.querySelectorAll(".gothic-divider");
 
-    // ── Scroll-driven section reveals ──
-    const reveals = document.querySelectorAll('.reveal');
+      let ticking = false;
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          const vh = window.innerHeight;
 
-    // ── Gothic divider parallax ──
-    const dividers = document.querySelectorAll('.gothic-divider');
-
-    let ticking = false;
-    function onScroll() {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const scrollY = window.scrollY;
-        const vh = window.innerHeight;
-
-        // Hero parallax — image translates at 40% of scroll speed
-        if (heroWrap) {
-          const heroH = heroSection.offsetHeight;
-          const heroProgress = clamp(scrollY / heroH, 0, 1);
-          heroWrap.style.transform = `translateY(${scrollY * 0.4}px)`;
-          // Fade hero slightly as we scroll past
-          heroWrap.style.opacity = 1 - heroProgress * 0.3;
-        }
-
-        // Reveal sections based on scroll progress
-        reveals.forEach(section => {
-          const rect = section.getBoundingClientRect();
-          const sectionTop = rect.top;
-          const sectionH = rect.height;
-
-          // Start animating when section enters bottom 15% of viewport
-          // Fully revealed when section top reaches 55% up from bottom
-          const enterPoint = vh * 0.85;
-          const fullPoint = vh * 0.45;
-          const raw = (enterPoint - sectionTop) / (enterPoint - fullPoint);
-          const progress = clamp(raw, 0, 1);
-          const eased = easeOutCubic(progress);
-
-          // Main section
-          section.style.opacity = eased;
-          section.style.transform = `translateY(${40 * (1 - eased)}px)`;
-
-          // Staggered children — each starts slightly later
-          const label = section.querySelector('.section-label');
-          const content = section.querySelector('.about, .play-modes, .learn-videos, .community-links');
-          const contentAlt = section.querySelector('.learn-links');
-          const aside = section.querySelector('.band-aside');
-          const asideInner = section.querySelector('.pull-quote, .at-a-glance, .first-game');
-
-          // Label: starts at 15% progress
-          if (label) {
-            const lp = clamp((progress - 0.15) / 0.6, 0, 1);
-            const le = easeOutQuart(lp);
-            label.style.opacity = le;
-            label.style.transform = `translateY(${20 * (1 - le)}px)`;
+          // Hero parallax — image translates at 40% of scroll speed
+          if (heroWrap) {
+            const heroH = heroSection.offsetHeight;
+            const heroProgress = clamp(scrollY / heroH, 0, 1);
+            heroWrap.style.transform = `translateY(${scrollY * 0.4}px)`;
+            heroWrap.style.opacity = 1 - heroProgress * 0.3;
           }
 
-          // Main content: starts at 25% progress
-          if (content) {
-            const cp = clamp((progress - 0.25) / 0.65, 0, 1);
-            const ce = easeOutCubic(cp);
-            content.style.opacity = ce;
-            content.style.transform = `translateY(${25 * (1 - ce)}px)`;
-          }
+          // Gothic divider parallax — slight upward shift as you scroll past
+          dividers.forEach((div) => {
+            const parent = div.closest(".band");
+            if (!parent) return;
+            const rect = parent.getBoundingClientRect();
+            const divProgress = clamp((vh - rect.bottom) / (vh * 0.5), -1, 1);
+            div.style.transform = `translateY(calc(100% + ${divProgress * -8}px))`;
+          });
 
-          // Alt content (learn links): starts at 40%
-          if (contentAlt) {
-            const ap = clamp((progress - 0.4) / 0.55, 0, 1);
-            const ae = easeOutCubic(ap);
-            contentAlt.style.opacity = ae;
-            contentAlt.style.transform = `translateY(${25 * (1 - ae)}px)`;
-          }
-
-          // Aside column: starts at 30% progress
-          if (aside) {
-            const ap = clamp((progress - 0.3) / 0.6, 0, 1);
-            const ae = easeOutCubic(ap);
-            aside.style.opacity = ae;
-            aside.style.transform = `translateY(${30 * (1 - ae)}px)`;
-          }
-
-          // Aside inner element: subtle scale
-          if (asideInner) {
-            const ip = clamp((progress - 0.35) / 0.55, 0, 1);
-            const ie = easeOutQuart(ip);
-            asideInner.style.opacity = ie;
-            asideInner.style.transform = `translateY(${20 * (1 - ie)}px) scale(${0.97 + 0.03 * ie})`;
-          }
-
-          // Secondary content (play-cta, community-note): starts at 50%
-          const secondary = section.querySelector('.play-cta, .community-note');
-          if (secondary) {
-            const sp = clamp((progress - 0.5) / 0.45, 0, 1);
-            const se = easeOutCubic(sp);
-            secondary.style.opacity = se;
-            secondary.style.transform = `translateY(${15 * (1 - se)}px)`;
-          }
+          ticking = false;
         });
+      }
 
-        // Gothic divider parallax — slight upward shift as you scroll past
-        dividers.forEach(div => {
-          const parent = div.closest('.band');
-          if (!parent) return;
-          const rect = parent.getBoundingClientRect();
-          const mid = rect.bottom;
-          // When the divider area is in view, shift it slightly
-          const divProgress = clamp((vh - mid) / (vh * 0.5), -1, 1);
-          div.style.transform = `translateY(calc(100% + ${divProgress * -8}px))`;
-        });
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll, { passive: true });
+      onScroll();
 
-        ticking = false;
-      });
-    }
+      // ── Section reveals via IntersectionObserver ──
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -8% 0px" },
+      );
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll, { passive: true });
-    // Initial call to set starting positions
-    onScroll();
-  </script>
-</body>
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => revealObserver.observe(el));
+    </script>
+  </body>
 </html>
